@@ -22,5 +22,6 @@ def find_2020_triple(report):
                     return
 
 report = read_puzzle_input()
+
 find_2020_pair(report)
 find_2020_triple(report)
