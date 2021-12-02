@@ -1,0 +1,4 @@
+﻿.vscode/settings.json
+.data
+__pycache__/*
+*.zip
