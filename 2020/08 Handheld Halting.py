@@ -2,9 +2,9 @@
 def read_puzzle_input(test = False):
 
     if test: 
-        fname = 'test.txt'
+        fname = '.data/test.txt'
     else:
-        fname = '08 Handheld Halting.txt'
+        fname = '.data/08 Handheld Halting.txt'
 
     pi = []
     file = open(fname, 'r', encoding='utf8')
@@ -52,10 +52,10 @@ def change_op():
 
         op, acc = first_loop(pic)
         if op == len(puin):
-            print(op, acc)
+            print(acc)
 
 puin = read_puzzle_input()
 
 op, acc = first_loop(copy_list(puin))
-print(op, acc)
+print(acc)
 change_op()

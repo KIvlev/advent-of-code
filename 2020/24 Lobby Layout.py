@@ -3,9 +3,9 @@
 def read_puzzle_input(test = False):
 
     if test: 
-        fname = '24 test.txt'
+        fname = '.data/24 test.txt'
     else:
-        fname = '24 Lobby Layout.txt'
+        fname = '.data/24 Lobby Layout.txt'
 
     file = open(fname, 'r', encoding='utf8')
 

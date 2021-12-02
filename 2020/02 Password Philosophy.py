@@ -2,7 +2,7 @@
 
 def read_puzzle_input():
     pi = []
-    file = open('02 Password Philosophy.txt', 'r', encoding='utf8')
+    file = open('.data/02 Password Philosophy.txt', 'r', encoding='utf8')
     for line in file:
         line = line.rstrip('\n')
         line, pwd = line.split(': ')

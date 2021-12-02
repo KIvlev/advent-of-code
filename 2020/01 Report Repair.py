@@ -1,6 +1,5 @@
-# -*- coding: UTF8 -*-
 def read_puzzle_input():
-    file = open('01 Report Repair.txt', 'r', encoding='utf8')
+    file = open('.data/01 Report Repair.txt', 'r', encoding='utf8')
     report = []
     for line in file:
         report.append(int(line.rstrip('\n')))

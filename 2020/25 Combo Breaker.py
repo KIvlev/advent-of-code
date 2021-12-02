@@ -9,9 +9,9 @@ def decrypt(key):
         i += 1
         res = (res * 7) % 20201227
         if res == key:
-            print(i, key)
+            # print(i, key)
             break
-    print('time: ', time.time() - start_time)
+    # print('time: ', time.time() - start_time)
     return i, res
 
 lc, kc = decrypt(9789649)
