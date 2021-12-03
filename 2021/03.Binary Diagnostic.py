@@ -3,7 +3,7 @@ from typing import Counter
 
 def read_puzzle_input(fname: str) -> list[str]:
 
-    with open('data/'+fname, encoding='utf8') as fh:
+    with open('.data/'+fname, encoding='utf8') as fh:
         txt = fh.read()
         lines = txt.split('\n')
 
@@ -58,8 +58,6 @@ def part_ii(input: list[str]):
         if len(ox_list) <= 1:
             break
     
-    # print(ox_list)
-
     # CO2
     co_list = input.copy()
     for i1 in range(size):
@@ -81,11 +79,7 @@ def part_ii(input: list[str]):
         if len(co_list) <= 1:
             break
     
-    # print(co_list)
-
     print(int(ox_list[0], 2) * int(co_list[0], 2))
-    # co_list = input.copy()
-
 
 DAY = "03"
 TEST = DAY + '.test.txt'

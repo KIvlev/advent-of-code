@@ -4,7 +4,7 @@ from typing import Counter
 
 def read_puzzle_input(fname: str) -> list[ list[str, int] ]:
     result = []
-    with open('data/' + fname, encoding='utf8') as fh:
+    with open('.data/' + fname, encoding='utf8') as fh:
         txt = fh.read()
         lines = txt.split('\n')
 
