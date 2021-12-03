@@ -36,9 +36,9 @@ test_data = read_puzzle_input(TEST_FILENAME)
 input_data = read_puzzle_input(DATA_FILENAME)
 
 print('Part I')
-part_i(test_data)
+# part_i(test_data)
 part_i(input_data)
 
 print('\nPart II')
-part_ii(test_data)
+# part_ii(test_data)
 part_ii(input_data)

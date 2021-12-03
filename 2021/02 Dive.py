@@ -25,7 +25,7 @@ def part_i(input: list[ list[str, int] ]):
             y += elem[1]
         elif elem[0] == 'up':
             y -= elem[1]
-    print(x, y, x * y)
+    print(x * y)
 
 
 def part_ii(input: list[ list[str, int] ]):
@@ -42,7 +42,7 @@ def part_ii(input: list[ list[str, int] ]):
             aim_y -= elem[1]
 
 
-    print(sub_x, sub_y, sub_x * sub_y)
+    print(sub_x * sub_y)
     
 
 
@@ -57,9 +57,9 @@ test_data = read_puzzle_input(TEST_FILENAME)
 input_data = read_puzzle_input(DATA_FILENAME)
 
 print('Part I')
-part_i(test_data)
+# part_i(test_data)
 part_i(input_data)
 
 print('\nPart II')
-part_ii(test_data)
+# part_ii(test_data)
 part_ii(input_data)
