@@ -1,11 +1,9 @@
-# -*- coding: UTF8 -*-
 import hashlib 
-# initializing string 
 
-def find_hash(size: int):
+def find_hash(hash_string):
     seed = "iwrupvqb"
+    size = len(hash_string)
     i = 0
-    hash_string = '0' * size
     while True:
         h = hashlib.md5((seed + str(i)).encode()).hexdigest()
         if h[:size] == hash_string:
@@ -13,5 +11,5 @@ def find_hash(size: int):
             return
         i += 1
 
-find_hash(5)
-find_hash(6)
+find_hash('00000')
+find_hash('000000')
