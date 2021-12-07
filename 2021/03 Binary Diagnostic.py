@@ -1,11 +1,9 @@
-﻿from os import path
-from typing import Counter
-
-def read_puzzle_input(fname: str) -> list[str]:
+﻿def read_puzzle_input(fname: str) -> list[str]:
 
     with open('.data/'+fname, encoding='utf8') as fh:
         txt = fh.read()
-        lines = txt.split('\n')
+    
+    lines = txt.split('\n')
 
     return lines
 
@@ -91,10 +89,8 @@ DATA_FILENAME = DAY + '.input.txt'
 test_data = read_puzzle_input(TEST_FILENAME)
 input_data = read_puzzle_input(DATA_FILENAME)
 
-print('Part I')
 # part_i(test_data)
 part_i(input_data)
 
-print('\nPart II')
 # part_ii(test_data)
 part_ii(input_data)
