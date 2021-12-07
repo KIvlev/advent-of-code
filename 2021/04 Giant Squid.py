@@ -1,7 +1,5 @@
-﻿from os import path
-from types import SimpleNamespace
-from typing import Counter
-import numpy as np
+﻿DAY = "04"
+DATA_FILENAME = DAY + '.input.txt'
 
 
 def unpack_line(line: str) -> list[int]: 
@@ -100,19 +98,5 @@ def part_ii():
                 rest_sum = sum(elems)
                 print(num * rest_sum)
 
-            
-# main    
-
-DAY = "04"
-TEST = DAY + '.test.txt'
-INPUT = DAY + '.input.txt'
-
-TEST_FILENAME = DAY + '.test.txt'
-DATA_FILENAME = DAY + '.input.txt'
-
-# print('Part I')
 part_i()
-
-# print('\nPart II')
 part_ii()
-# part_ii(input_data)

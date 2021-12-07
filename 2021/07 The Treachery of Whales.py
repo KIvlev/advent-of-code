@@ -1,7 +1,4 @@
-﻿from os import path
-from typing import Counter
-
-def read_puzzle_input(fname: str) -> list[str]:
+﻿def read_puzzle_input(fname: str) -> list[str]:
 
     with open('.data/'+fname, encoding='utf8') as fh:
         txt = fh.read()
@@ -43,10 +40,6 @@ def part_ii(positions: list[int]):
     print(round(min_fuel_sum))
 
 DAY = "07"
-TEST = DAY + '.test.txt'
-INPUT = DAY + '.input.txt'
-
-TEST_FILENAME = DAY + '.test.txt'
 DATA_FILENAME = DAY + '.input.txt'
 
 input_data = read_puzzle_input(DATA_FILENAME)

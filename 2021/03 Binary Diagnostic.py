@@ -1,4 +1,7 @@
-﻿def read_puzzle_input(fname: str) -> list[str]:
+﻿DAY = "03"
+DATA_FILENAME = DAY + '.input.txt'
+
+def read_puzzle_input(fname: str) -> list[str]:
 
     with open('.data/'+fname, encoding='utf8') as fh:
         txt = fh.read()
@@ -79,18 +82,7 @@ def part_ii(input: list[str]):
     
     print(int(ox_list[0], 2) * int(co_list[0], 2))
 
-DAY = "03"
-TEST = DAY + '.test.txt'
-INPUT = DAY + '.input.txt'
 
-TEST_FILENAME = DAY + '.test.txt'
-DATA_FILENAME = DAY + '.input.txt'
-
-test_data = read_puzzle_input(TEST_FILENAME)
 input_data = read_puzzle_input(DATA_FILENAME)
-
-# part_i(test_data)
 part_i(input_data)
-
-# part_ii(test_data)
 part_ii(input_data)

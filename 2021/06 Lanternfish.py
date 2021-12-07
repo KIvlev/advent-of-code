@@ -1,8 +1,4 @@
 ﻿DAY = "06"
-TEST = DAY + '.test.txt'
-INPUT = DAY + '.input.txt'
-
-TEST_FILENAME = DAY + '.test.txt'
 DATA_FILENAME = DAY + '.input.txt'
 
 def read_puzzle_input(fname: str) -> list[int]:

@@ -1,4 +1,8 @@
-﻿def read_puzzle_input(fname: str) -> list[int]:
+﻿DAY = "01"
+DATA_FILENAME = DAY + '.input.txt'
+
+
+def read_puzzle_input(fname: str) -> list[int]:
 
     result = []
     with open('.data/' + fname, encoding='utf8') as fh:
@@ -27,18 +31,6 @@ def part_ii(input: str):
 
     print(cnt)
 
-
-DAY = "01"
-TEST_FILENAME = DAY + '.test.txt'
-DATA_FILENAME = DAY + '.input.txt'
-
-test_data = read_puzzle_input(TEST_FILENAME)
 input_data = read_puzzle_input(DATA_FILENAME)
-
-print('Part I')
-# part_i(test_data)
 part_i(input_data)
-
-print('\nPart II')
-# part_ii(test_data)
 part_ii(input_data)

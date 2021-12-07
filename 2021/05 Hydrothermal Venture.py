@@ -1,12 +1,4 @@
-﻿from os import path
-from typing import Counter
-
-
-DAY = "05"
-TEST = DAY + '.test.txt'
-INPUT = DAY + '.input.txt'
-
-TEST_FILENAME = DAY + '.test.txt'
+﻿DAY = "05"
 DATA_FILENAME = DAY + '.input.txt'
 
 def read_puzzle_input(fname: str) -> list[list[int]]:
@@ -125,8 +117,6 @@ def part_ii(input: list[str]):
             cnt += 1
     print(cnt)
 
-test_data = read_puzzle_input(TEST_FILENAME)
 input_data = read_puzzle_input(DATA_FILENAME)
-
 part_i(input_data)
 part_ii(input_data)
