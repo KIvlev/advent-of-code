@@ -1,8 +1,4 @@
 ﻿DAY = "08"
-TEST = DAY + '.test.txt'
-INPUT = DAY + '.input.txt'
-
-TEST_FILENAME = DAY + '.test.txt'
 DATA_FILENAME = DAY + '.input.txt'
 
 def read_puzzle_input(fname: str) -> list[list[str], list[str]]:
@@ -21,23 +17,17 @@ def read_puzzle_input(fname: str) -> list[list[str], list[str]]:
         
     return result
 
-
 def part_i(patterns: list[list[str], list[str]]):
     mapping1478 = {2: 1, 3: 7, 4: 4, 7: 8}
     cnt = 0
     for pattern in patterns:
-        # print(pattern[0])
-        # print(pattern[1])
         for p in pattern[1]:
-            # 1, 7, 4, 8
             if len(p) in mapping1478:
                 cnt += 1
-                # print('   ', p, mapping1478[len(p)])
     print(cnt)
 
 
 def identify(input: list[str]) -> dict[str]:
-    res = {}
     to_identify =  {input[i]: 
                         {
                         'els': set(input[i]),
@@ -53,23 +43,20 @@ def identify(input: list[str]) -> dict[str]:
     for elem in to_identify:
         if (len(elem)) == 2:
             to_identify[elem]['val'] = 1
-            res[elem] = 1
             patterns[1] = elem
         elif (len(elem)) == 3:
             to_identify[elem]['val'] = 7
-            res[elem] = 7
             patterns[7] = elem
         elif (len(elem)) == 4:
             to_identify[elem]['val'] = 4
-            res[elem] = 4
             patterns[4] = elem
         elif (len(elem)) == 7:
             to_identify[elem]['val'] = 8
-            res[elem] = 8
             patterns[8] = elem
 
     # a
     alphabet['a'] = set(patterns[7]).difference(set(patterns[1]))
+    
     for elem in to_identify:
         to_identify[elem]['els'].difference_update(alphabet['a'])
 
@@ -130,17 +117,6 @@ def identify(input: list[str]) -> dict[str]:
                 and len(to_identify[elem]['els']) == 1:
             alphabet['b'] = to_identify[elem]['els'].copy()
 
-
-
-    # print('*'*20)
-    # for elem in to_identify:
-    #     print(elem, to_identify[elem])
-
-    # print('')
-    # print(alphabet)
-    # print('')
-    # print(patterns)
-    
     result = {}
     for letter in alphabet:
         result[''.join(alphabet[letter])] = letter
@@ -169,17 +145,7 @@ def part_ii(patterns: list[list[str], list[str]]):
         sum += res
     print(sum)
 
-
-
-
-
-test_data = read_puzzle_input(TEST_FILENAME)
 input_data = read_puzzle_input(DATA_FILENAME)
 
-# print('Part I')
-# part_i(test_data)
-# part_i(input_data)
-
-print('\nPart II')
-# part_ii(test_data)
+part_i(input_data)
 part_ii(input_data)
