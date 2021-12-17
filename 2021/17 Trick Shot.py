@@ -1,12 +1,10 @@
 ﻿FX, TX, FY, TY = 60, 94, -171, -136
 AREA = set([(x, y) for x in range(FX, TX + 1) for y in range(FY , TY + 1, 1)])
-bottom = FY
 
 def probe (vx, vy):
     my = 0
-    bottom = min(AREA)[1]
     coords = (0, 0)
-    while coords[1] >= bottom:
+    while coords[1] >= FY:
         coords = (coords[0] + vx,  coords[1] + vy)
         my = max(my, coords[1])
         vx = max(0, vx -1)
