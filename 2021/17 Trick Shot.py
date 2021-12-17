@@ -1,5 +1,5 @@
 ﻿FX, TX, FY, TY = 60, 94, -171, -136
-AREA = set([(x, y) for x in range(FX, TX + 1) for y in range(FY , TY + 1, 1)])
+AREA = set([(x, y) for x in range(FX, TX + 1) for y in range(FY , TY + 1)])
 
 def probe (vx, vy):
     my = 0
@@ -14,7 +14,7 @@ def probe (vx, vy):
         
     return None
 
-def run_probe():
+def run_probes():
     probs = []
 
     for vx in range(1, TX + 1):
@@ -27,4 +27,4 @@ def run_probe():
     print(probs[0][0])
     print(len(probs))
 
-run_probe()
+run_probes()
