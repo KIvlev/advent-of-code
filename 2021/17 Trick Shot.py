@@ -1,4 +1,7 @@
-﻿FX, TX, FY, TY = 60, 94, -171, -136
+﻿with open('.data/17.txt', encoding='utf8') as fh:
+    FX, TX, FY, TY = list(map(int, fh.read().replace('target area: x=', '')\
+                .replace(' y=', '').replace('..', ',').split(',')))
+
 AREA = set([(x, y) for x in range(FX, TX + 1) for y in range(FY , TY + 1)])
 
 def probe (vx, vy):
